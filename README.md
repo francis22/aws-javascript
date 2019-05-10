@@ -4,7 +4,8 @@
 The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The coorelating server-side Node.js code may be foundt at https://github.com/aaronwht/aws-javascript-api.
 
 ### Running locally
-Create an ```.env``` file in the root of your project as pictured below.
+Create an ```.env``` file in the root of your project as pictured below.  As a convention, ```.env``` files store environment variables and are not checked into code repositiories as they often include sensative information.
+
 ![.env file](https://www.aaronwht.com/images/s3-build/env-variables.png)
 
 Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)
@@ -12,6 +13,8 @@ Create the variable ```REACT_APP_API``` and set it's value to ```http://localhos
 ```npm install```
 
 ```npm start```
+
+Your app should run locally.
 
 The ```buildspec.yml``` file (code below) runs on the AWS Build Server.
 ```
