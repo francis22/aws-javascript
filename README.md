@@ -10,11 +10,13 @@ Create an ```.env``` file in the root of your project as pictured below.  As a c
 
 Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)  This will point to the coorelating API endpoint specified above.
 
+Run the below commands to install NPM packages locally and run the application.
+
 ```npm install```
 
 ```npm start```
 
-Your app should run locally.
+The application should run locally.
 
 The ```buildspec.yml``` file (code below) runs on the AWS build server.
 ```
