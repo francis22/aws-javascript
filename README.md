@@ -1,5 +1,8 @@
 # Deploy React to AWS
 
+![Deploy React to AWS](https://www.aaronwht.com/images/s3-build/deploy-react-to-aws.jpg)
+
+
 ### Overview
 The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The coorelating server-side Node.js code may be foundt at https://github.com/aaronwht/aws-javascript-api.
 
