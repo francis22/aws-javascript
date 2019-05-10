@@ -8,7 +8,7 @@ Create an ```.env``` file in the root of your project as pictured below.  As a c
 
 ![.env file](https://www.aaronwht.com/images/s3-build/env-variables.png)
 
-Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)
+Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)  This will point to the coorelating API endpoint specified above.
 
 ```npm install```
 
@@ -28,8 +28,10 @@ phases:
         - aws s3 cp build/index.html s3://$S3_BUCKET
 ```
 
-```npm install``` - Installs NPM packages on the AWS build server.
-```npm run build``` - Creates a production version of the application on the AWS build server in the ```build``` folder.
-```aws s3 cp build``` instructs the build server to copy recursively copy the contents of the ```build``` folder to the AWS S3 bucket using the environment variable ```$S3_BUCKET```.  This environment variable's value is used by the ```AWS build pipeline``` (displayed below).
+```npm install``` installs NPM packages on the AWS build server.
+
+```npm run build``` creates a production version of the application on the AWS build server in the ```build``` folder.
+
+```aws s3 cp build``` uses the AWS CLI (which is automatically installed on the build server) to recursively copy the contents of the ```build``` folder to the AWS S3 bucket using the environment variable ```$S3_BUCKET```.  This environment variable's value is used by the ```AWS build pipeline``` (displayed below).
 
 ![environment variable](https://www.aaronwht.com/images/s3-build/pipeline-envs.png)
