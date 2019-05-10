@@ -6,8 +6,11 @@ The code in this repository is configured to deploy to AWS S3 using AWS CodePipe
 ### Running locally
 Create an ```.env``` file in the root of your project as pictured below.
 ![.env file](https://www.aaronwht.com/images/s3-build/env-variables.png)
+
 Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)
+
 ```npm install```
+
 ```npm start```
 
 The ```buildspec.yml``` file (listed below) runs on the AWS Build Server
