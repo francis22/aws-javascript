@@ -3,6 +3,7 @@ phases:
     install:
         commands:
         - npm install
+        - pip3 install --upgrade awscli
         - npm run build
         - aws s3 cp build s3://$S3_BUCKET --recursive --exclude 'index.html'
         - aws s3 cp build/index.html s3://$S3_BUCKET
