@@ -102,7 +102,7 @@ const App = props => {
                   type="text"
                   onChange={handleChange}
                   value={location}
-                  placeholder="Maui"
+                  placeholder="Greece"
                 />
               </div>
             </div>
