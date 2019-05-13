@@ -6,9 +6,6 @@
 ### Overview
 The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The coorelating server-side Node.js code may be found at https://github.com/aaronwht/aws-javascript-api.
 
-Coorelating Video Tutorial
-https://www.youtube.com/watch?v=5fyAgfe67Qg
-
 ### Running locally
 Create an ```.env``` file in the root of your project as pictured below.  As a convention, ```.env``` files store environment variables and are not checked into code repositiories as they often include sensative, or environment-related, information.  This is typically done by including the ```.env``` file in your ```.gitignore``` file.
 
