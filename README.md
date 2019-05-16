@@ -6,6 +6,9 @@
 ### Overview
 The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The coorelating server-side Node.js code may be found at https://github.com/aaronwht/aws-javascript-api.
 
+### Video Tutorial
+A correlating 45 minute video tutorial is available at https://www.youtube.com/watch?v=NL0t5LKSBX0 which walks you through the process of deploying your React and Node application to AWS.
+
 ### Running locally
 Create an ```.env``` file in the root of your project as pictured below.  As a convention, ```.env``` files store environment variables and are not checked into code repositiories as they often include sensative, or environment-related, information.  This is typically done by including the ```.env``` file in your ```.gitignore``` file.
 
