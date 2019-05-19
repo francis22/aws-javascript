@@ -99,7 +99,7 @@ const App = props => {
                   type="text"
                   onChange={handleChange}
                   value={location}
-                  placeholder="Italy"
+                  placeholder="Greece"
                 />
               </div>
             </div>
