@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useRef } from "react"
+import axios from "axios"
 import {
   Box,
   Button,
@@ -7,86 +7,83 @@ import {
   Container,
   Columns,
   Heading
-} from "react-bulma-components/full";
+} from "react-bulma-components/full"
 
 const App = props => {
-  const [location, setLocation] = useState("");
-  const [image, setImage] = useState("");
-  const [locations, setLocations] = useState([]);
-  const [message, setMessage] = useState("");
-  const [images, setImages] = useState([]);
+  const [location, setLocation] = useState("")
+  const [image, setImage] = useState("")
+  const [locations, setLocations] = useState([])
+  const [message, setMessage] = useState("")
+  const [images, setImages] = useState([])
 
   useEffect(() => {
-    getLocations();
-  }, []);
+    getLocations()
+  }, [])
 
   async function getLocations() {
-    const returnedData = await axios.get(process.env.REACT_APP_API);
-    if (returnedData.status === "error") return;
+    const returnedData = await axios.get(process.env.REACT_APP_API)
+    if (returnedData.status === "error") return
     if (returnedData) {
-      const { locations } = returnedData.data;
-      setLocations(locations);
+      const { locations } = returnedData.data
+      setLocations(locations)
     }
   }
 
   function handleChange(e) {
-    setLocation(e.target.value);
+    setLocation(e.target.value)
   }
 
   const selectImage = url => {
-    setImage(url);
-  };
+    setImage(url)
+  }
 
   const handleSubmit = async e => {
-    e.preventDefault();
-    setMessage("");
+    e.preventDefault()
+    setMessage("")
     if (!location) {
-      setMessage("Please enter a location");
-      return;
+      setMessage("Please enter a location")
+      return
     }
 
-    setImages([]);
-    const returnedData = await axios.post(
-      `${process.env.REACT_APP_API}images`,
-      { location }
-    );
-    setImages(returnedData.data.images);
-  };
+    setImages([])
+    const returnedData = await axios.post(`${process.env.REACT_APP_API}images`, { location })
+    setImages(returnedData.data.images)
+  }
 
   const addLocation = async () => {
     const returnedData = await axios.post(process.env.REACT_APP_API, {
       location,
       image
-    });
+    })
 
-    let newLocation = {};
-    newLocation.location_id = returnedData.data.location_id;
-    newLocation.location = location;
-    newLocation.image = image;
+    let newLocation = {}
+    newLocation.location_id = returnedData.data.location_id
+    newLocation.location = location
+    newLocation.image = image
 
-    let allLocations = locations;
-    allLocations.push(newLocation);
+    let allLocations = locations
+    allLocations.push(newLocation)
 
-    setImages([]);
-    setLocation("");
-    setImage("");
-    setLocations(allLocations);
-  };
+    setImages([])
+    setLocation("")
+    setImage("")
+    setLocations(allLocations)
+  }
 
   const handleDelete = e => {
-    axios.delete(process.env.REACT_APP_API + e.location_id);
-    let allLocations = locations;
+    axios.delete(process.env.REACT_APP_API + e.location_id)
+    let allLocations = locations
     for (let i = 0; i < allLocations.length; i++) {
       if (allLocations[i].location_id === e.location_id) {
-        allLocations.splice(i, 1);
+        allLocations.splice(i, 1)
       }
     }
 
-    setLocations([]);
+    setLocations([])
     setTimeout(() => {
-      setLocations(allLocations);
-    }, 0);
-  };
+      setLocations(allLocations)
+    }, 0)
+  }
 
   return (
     <Container>
@@ -134,14 +131,14 @@ const App = props => {
                     onClick={() => selectImage(image.thumbnail.url)}
                     key={image.thumbnail.url}
                   >
-                    <div class="card-image">
+                    <div className="card-image">
                       <figure className="image is-4by3">
                         <img src={image.thumbnail.url} />
                       </figure>
                     </div>
                   </div>
                 </Columns.Column>
-              );
+              )
             })}
         </div>
       </div>
@@ -174,11 +171,11 @@ const App = props => {
                   </Card.Content>
                 </Card>
               </Columns.Column>
-            );
+            )
           })}
       </Columns>
     </Container>
-  );
-};
+  )
+}
 
-export default App;
+export default App
