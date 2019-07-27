@@ -4,18 +4,18 @@
 
 
 ### Overview
-The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The coorelating server-side Node.js code may be found at https://github.com/aaronwht/aws-javascript-api.
+The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The correlating server-side Node.js code may be found at https://github.com/aaronwht/aws-javascript-api.
 
 ### Correlating Video Tutorial
 https://www.youtube.com/watch?v=sgBKkug6qsE
 
 
 ### Running locally
-Create an ```.env``` file in the root of your project as pictured below.  As a convention, ```.env``` files store environment variables and are not checked into code repositiories as they often include sensative, or environment-related, information.  This is typically done by including the ```.env``` file in your ```.gitignore``` file.
+Create an ```.env``` file in the root of your project as pictured below.  As a convention, ```.env``` files store environment variables and are not checked into code repositories as they often include sensitive, or environment-related, information.  This is typically done by including the ```.env``` file in your ```.gitignore``` file.
 
 ![.env file](https://www.aaronwht.com/images/s3-build/env-variables.png)
 
-Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)  This will point to the coorelating API endpoint specified above.
+Create the variable ```REACT_APP_API``` and set it's value to ```http://localhost:8080/```. (include the suffix slash)  This will point to the correlating API endpoint specified above.
 
 Run the below commands to install NPM packages locally and run the application.
 
