@@ -6,6 +6,8 @@
 ### Overview
 The code in this repository is configured to deploy to AWS S3 using AWS CodePipeline. The correlating server-side Node.js code may be found at https://github.com/aaronwht/aws-javascript-api.
 
+[Contact me](https://www.aaronwht.com/contact-me) if you run into problems using this repo or tutorial.  
+
 ### Correlating Video Tutorial
 https://www.youtube.com/watch?v=sgBKkug6qsE
 
