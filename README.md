@@ -43,4 +43,6 @@ phases:
 
 ```npm run build``` creates a production version of the application on the AWS build server in the ```build``` folder.
 
-```aws s3 cp build``` uses the AWS CLI (which is automatically installed on the build server) to recursively copy the contents of the ```build``` folder to the AWS S3 bucket using the environment variable ```$S3_BUCKET```.  This environment variable's value is used by the ```AWS build pipeline```.
+```aws s3 cp build``` uses the AWS CLI (which is automatically installed on the build server) to recursively copy the contents of the ```build``` folder to the AWS S3 bucket using the environment variable ```$S3_BUCKET```.  This environment variable's value is used by the ```AWS build pipeline```.  
+
+If this helped you consider supporting me at [Patreon](https://www.patreon.com/aaronwht)
