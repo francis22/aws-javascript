@@ -45,4 +45,4 @@ phases:
 
 ```aws s3 cp build``` uses the AWS CLI (which is automatically installed on the build server) to recursively copy the contents of the ```build``` folder to the AWS S3 bucket using the environment variable ```$S3_BUCKET```.  This environment variable's value is used by the ```AWS build pipeline```.  
 
-If this helped you please consider making a one-time $1-$3 donation to supporting me at [Patreon](https://www.patreon.com/aaronwht)
+If this helped you consider making a one time $1-$3 donation to support me at [Patreon](https://www.patreon.com/aaronwht)
